@@ -14,14 +14,14 @@ if (userRole === "admin") {
 let isLoggedIn = true;
 let userMessage;
 
-if(isLoggedIn){
-    if(userRole === "admin"){
-        userMessage = "Welcome back, Admin!";
-    } else {
-        userMessage = "Welcome back, User!";
-    }
-}else{
-    userMessage = "Please log in to continue.";
+if (isLoggedIn) {
+  if (userRole === "admin") {
+    userMessage = "Welcome back, Admin!";
+  } else {
+    userMessage = "Welcome back, User!";
+  }
+} else {
+  userMessage = "Please log in to continue.";
 }
 
 // console.log("accessLevel:", accessLevel);
@@ -30,19 +30,19 @@ if(isLoggedIn){
 let userType = "admin";
 let userCategory;
 
-switch(userType){
-    case "admin":
-        userCategory = "Administrator";
-        break;
-    case "manager":
-        userCategory = "Manager";
-        break;
-    case "subscriber":
-        userCategory = "Subscriber";
-        break;
-    default:
-        userCategory = "Unknown";
-        break;
+switch (userType) {
+  case "admin":
+    userCategory = "Administrator";
+    break;
+  case "manager":
+    userCategory = "Manager";
+    break;
+  case "subscriber":
+    userCategory = "Subscriber";
+    break;
+  default:
+    userCategory = "Unknown";
+    break;
 }
 
 // console.log("accessLevel:", accessLevel);
@@ -50,9 +50,29 @@ switch(userType){
 // console.log("userCategory:", userCategory);
 
 let isAuthenticated = true;
-let isAuthenticationStatus = isAuthenticated ? "Authenticated" : "not Authenticated";
+let isAuthenticationStatus = isAuthenticated
+  ? "Authenticated"
+  : "not Authenticated";
 
-console.log("accessLevel:", accessLevel);
-console.log("userMessage:", userMessage);
-console.log("userCategory:", userCategory);
-console.log("isAuthenticationStatus:", isAuthenticationStatus);
+// console.log("accessLevel:", accessLevel);
+// console.log("userMessage:", userMessage);
+// console.log("userCategory:", userCategory);
+// console.log("isAuthenticationStatus:", isAuthenticationStatus);
+let userStatus = "Employee";
+let userRoleType = userStatus === "Employee" ? "Staff Member" : "Guest";
+let userServiceLevel;
+if (userRoleType === "Staff Member") {
+  if (isAuthenticated) {
+    userServiceLevel = "Services dietétiques";
+  } else {
+    userServiceLevel = "Services restreints";
+  }
+} else if (userRoleType === "Guest") {
+  if (isAuthenticated) {
+    userServiceLevel = "Services limités";
+  } else {
+    userServiceLevel = "Aucun service";
+  }
+}
+
+console.log("userServiceLevel:", userServiceLevel);
