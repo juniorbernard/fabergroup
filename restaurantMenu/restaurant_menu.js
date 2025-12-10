@@ -10,15 +10,15 @@ document.getElementById("breakfastMenuItems").innerHTML =
   breakfastMenuItemsHTML;
 
 let mainCourseItem = " ";
-mainCourseMenu.forEach((item, index)=>{
-    mainCourseItem += `Article ${index + 1} : ${item} <br>`;
+mainCourseMenu.forEach((item, index) => {
+  mainCourseItem += `Article ${index + 1} : ${item} <br>`;
 });
 
 document.getElementById("maincourseMenuItems").innerHTML = mainCourseItem;
 
 let dessertItem = " ";
 for (let i = 0; i < dessertMenu.length; i++) {
-    dessertItem += `Dessert ${i + 1} : ${dessertMenu[i]} <br>`;
+  dessertItem += `Dessert ${i + 1} : ${dessertMenu[i]} <br>`;
 }
 
 document.getElementById("dessertMenuItems").innerHTML = dessertItem;
