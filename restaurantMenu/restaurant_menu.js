@@ -1,6 +1,7 @@
 const breakfastMenu = ["Pancakes", "Eggs Benedict", "Oatmeal", "Frittata"];
 const mainCourseMenu = ["Steak", "Pasta", "Burger", "Salmon"];
 const dessertMenu = ["Cake", "Ice Cream", "Pudding", "Fruit Salad"];
+const beverageMenu = ["Coffee", "Tea", "Juice", "Soda"];
 
 const breakfastMenuItemsHTML = breakfastMenu
   .map((item, index) => `<p>Item ${index + 1}: ${item}</p>`)
@@ -22,3 +23,10 @@ for (let i = 0; i < dessertMenu.length; i++) {
 }
 
 document.getElementById("dessertMenuItems").innerHTML = dessertItem;
+
+let beverageManuItems = " ";
+for (let i = 0; i < beverageMenu.length; i++) {
+  beverageManuItems += `Beverage ${i + 1} : ${beverageMenu[i]} <br>`; // Utiliser la variable beverageMenu ici
+}
+
+document.getElementById("beverageMenuItems").innerHTML = beverageManuItems;
