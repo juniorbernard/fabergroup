@@ -2,6 +2,9 @@ const employees = [
   { id: 1, name: "John Doe", age: 30, department: "IT", salary: 50000 },
   { id: 2, name: "Alice Smith", age: 28, department: "HR", salary: 45000 },
   { id: 3, name: "Bob Johnson", age: 35, department: "Finance", salary: 60000 },
+  { id: 4, name: "Jr Beya", age: 26, department: "IT", salary: 60000 },
+  { id: 5, name: "Julia B", age: 20, department: "HR", salary: 60000 },
+  { id: 6, name: "Dorcas B", age: 22, department: "Finance", salary: 60000 },
   //... D'autres enregistrements d'employés peuvent être ajoutés ici
 ];
 
