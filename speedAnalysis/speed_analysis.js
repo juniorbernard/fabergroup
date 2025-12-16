@@ -50,5 +50,8 @@ function endTest() {
     " secondes</p>" +
     "<p>Mots par minute (WPM) : " +
     wpm +
+    "</p>" +
+    "<p>Longeur du text : " +
+    userTypedText.length +
     "</p>";
 }
