@@ -41,19 +41,19 @@ function showbooks() {
 }
 
 // fonction pour modifier un livre
-function editbook(index){
-    const book = books[index];
-    document.getElementById("bookName").value = book.name;
-    document.getElementById("authorName").value = book.authorName;
-    document.getElementById("bookDescription").value = book.bookDescription;
-    document.getElementById("pagesNumber").value = book.pagesNumber;
-    books.splice(index, 1); // Supprime l"ancien livre
-    showbooks(); // Met à jour l'affichage des livres
+function editbook(index) {
+  const book = books[index];
+  document.getElementById("bookName").value = book.name;
+  document.getElementById("authorName").value = book.authorName;
+  document.getElementById("bookDescription").value = book.bookDescription;
+  document.getElementById("pagesNumber").value = book.pagesNumber;
+  books.splice(index, 1); // Supprime l"ancien livre
+  showbooks(); // Met à jour l'affichage des livres
 }
 
-function clearInputs(){
-    document.getElementById("bookName").value = "";
-    document.getElementById("authorName").value = "";
-    document.getElementById("bookDescription").value = "";
-    document.getElementById("pagesNumber").value = "";
+function clearInputs() {
+  document.getElementById("bookName").value = "";
+  document.getElementById("authorName").value = "";
+  document.getElementById("bookDescription").value = "";
+  document.getElementById("pagesNumber").value = "";
 }
