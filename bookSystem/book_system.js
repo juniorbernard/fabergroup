@@ -33,7 +33,7 @@ function showbooks() {
     <p><strong>Nombre de pages : </strong>${book.pagesNumber}</p>
     <hr />
     <button onclick="editbook(${index})">Modifier</button>
-    <button onclick="books.splice(${index}, 1); showbooks();">Supprimer</button>
+    <button onclick="deletebook(${index})">Supprimer</button>
     <hr />
     <hr />
     `
@@ -52,6 +52,13 @@ function editbook(index) {
   showbooks(); // Met à jour l'affichage des livres
 }
 
+// fonction pour supprimer un livre
+function deletebook(index) {
+  books.splice(index, 1);
+  showbooks();
+}
+
+// fonction pour vider les champs de saisie
 function clearInputs() {
   document.getElementById("bookName").value = "";
   document.getElementById("authorName").value = "";
