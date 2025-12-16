@@ -33,6 +33,7 @@ function showbooks() {
     <p><strong>Nombre de pages : </strong>${book.pagesNumber}</p>
     <hr />
     <button onclick="editbook(${index})">Modifier</button>
+    <button onclick="books.splice(${index}, 1); showbooks();">Supprimer</button>
     <hr />
     <hr />
     `
