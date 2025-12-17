@@ -8,8 +8,13 @@ function performOperation() {
     const sumation_result = addition(input1, input2);
     const subtraction_result = subtraction(input1, input2);
     const division_result =
-      input2 === 0 ? "La division par zero est impossible." : division(input1, input2);
-    const mudulo_result = mudulo(input1, input2);
+      input2 === 0
+        ? "La division par zero est impossible."
+        : division(input1, input2);
+    const mudulo_result =
+      input2 === 0
+        ? "Le modulo ne s'applique pas sans division."
+        : mudulo(input1, input2);
 
     displayResult({
       multiply_result,
@@ -68,5 +73,5 @@ function displayResult(result) {
 La somme est de : ${sumation_result}
 Le reste est de : ${subtraction_result}
 Le quotient est de : ${division_result} 
-Le reste de la division est de : ${mudulo_result}`;
+Le modulo est de : ${mudulo_result}`;
 }
