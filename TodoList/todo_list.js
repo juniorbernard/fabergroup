@@ -1,6 +1,7 @@
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const deleteAllBtn = document.getElementById("deleteAllBtn");
 
 let tasks = [];
 
@@ -48,6 +49,8 @@ function deleteAll(){
     displayTasks();
 }
 
+// Ecouter d'évenement pour effacer toutes les tâches
+deleteAllBtn.addEventListener("click", deleteAll);
 // Ecouter d'évenement pour l'ajout de tâches
 addTaskBtn.addEventListener("click", addTask);
 // Ecouter d'évenement pour effacer les tâches completées
