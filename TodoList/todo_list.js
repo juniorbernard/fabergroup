@@ -4,7 +4,7 @@ const clearCompletedBtn = document.getElementById("clearCompletedBtn");
 
 let tasks = [];
 
-// Ecouter d'évenement pour la saisie de texte et l'ajout de tâches
+// Ecouteur d'évenement pour la saisie de texte et l'ajout de tâches
 function addTask() {
   const taskText = taskInput.value.trim();
   if (taskText !== "") {
