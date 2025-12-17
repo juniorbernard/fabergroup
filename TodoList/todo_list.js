@@ -42,6 +42,12 @@ function clearCompletedTasks() {
   displayTasks();
 }
 
+// fonction pour effacer toutes les taches
+function deleteAll(){
+    tasks = [];
+    displayTasks();
+}
+
 // Ecouter d'évenement pour l'ajout de tâches
 addTaskBtn.addEventListener("click", addTask);
 // Ecouter d'évenement pour effacer les tâches completées
